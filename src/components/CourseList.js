@@ -8,7 +8,7 @@ function CourseList(props) {
       <thead>
         <tr>
           <th>Title</th>
-          <th>Author ID</th>
+          <th>Author</th>
           <th>Category</th>
         </tr>
       </thead>
@@ -17,6 +17,15 @@ function CourseList(props) {
           return (
             <tr key={course.id}>
               <td>
+                <Link to={"/course/" + course.slug}>{course.title}</Link>
+              </td>
+              <td>
+                {props.authors.map(author => {
+                  if (author.id === course.authorId) return author.name;
+                })}
+              </td>
+              <td>{course.category}</td>
+              <td>
                 <button
                   className="btn btn-outline-danger"
                   onClick={() => props.deleteCourse(course.id)}
@@ -24,11 +33,6 @@ function CourseList(props) {
                   Delete
                 </button>
               </td>
-              <td>
-                <Link to={"/course/" + course.slug}>{course.title}</Link>
-              </td>
-              <td>{course.authorId}</td>
-              <td>{course.category}</td>
             </tr>
           );
         })}

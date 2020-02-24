@@ -31,6 +31,10 @@ Dispatcher.register(action => {
       _authors = action.authors;
       store.emitChange();
       break;
+    case actionTypes.CREATE_AUTHOR:
+      _authors.push(action.author);
+      store.emitChange();
+      break;
     default:
   }
 });

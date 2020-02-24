@@ -69,6 +69,14 @@
       "slug": "web-components-shadow-dom",
       "authorId": 1,
       "category": "HTML5"
+    },
+    {
+      "id": 11,
+      "slug": "hahe",
+      "title": "hahe",
+      "authorId": 4,
+      "category": "JavaScript",
+      "createdAt": 1582552643883
     }
   ],
   "authors": [
@@ -83,6 +91,11 @@
     {
       "id": 3,
       "name": "Dan Wahlin"
+    },
+    {
+      "id": 4,
+      "name": "Amer Surkovic",
+      "createdAt": 1582552635392
     }
   ]
 }
